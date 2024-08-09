@@ -1,4 +1,4 @@
-Baza de date pentru o bibiloteca, avem tablele:
+Baza de date pentru o bibiloteca, avem tabelele:
 autor - contine lista de autori
 editura - contine lista de edituri
 carte - lista de carti prezente in biblioteca, are cheie externa la tabela editura(n la 1) si la tabela autor(n la 1)
