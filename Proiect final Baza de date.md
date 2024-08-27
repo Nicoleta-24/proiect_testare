@@ -82,15 +82,18 @@ DDL (Data Definition Language)
 
   After the database and the tables have been created, a few ALTER instructions were written in order to update the structure of the database, as described below:
 
- - -- modific tipul unei coloane
+-- modific tipul unei coloane
+
 **alter table autor 
 modify column nume varchar (60);**
 
 -- sterg coloana nume
+
 alter table autor
 drop column nume;**
 
 -- adaug coloana nume
+
 alter table autor add column nume varchar (50) not null;
 
 
@@ -102,12 +105,14 @@ alter table autor add column nume varchar (50) not null;
   Below you can find all the insert instructions that were created in the scope of this project:
 
 -- autor
+
 INSERT INTO autor (nume,prenume,locul_nasterii,data_nasterii) VALUES ('Eminescu','Mihai', 'Botosani', '1850-01-15');
 INSERT INTO autor (nume,prenume,locul_nasterii,data_nasterii) VALUES ('Creanga','Ion', 'Iasi', '1889-12-31');
 INSERT INTO autor (nume,prenume,locul_nasterii,data_nasterii) VALUES ('Sadoveanu','Mihail', 'Bucuresti',  '1961-10-19');
 INSERT INTO autor ( prenume, locul_nasterii, data_nasterii, nume) values ( 'Mircea', 'Bucuresti', '1956-06-01', 'Cartarescu');
 
 -- editura
+
 INSERT INTO editura (nume,telefon,adresa) VALUES ('NEMIRA','0721747464','Str. Iani Buzoiani, nr. 14, sector 1, Bucuresti, România');
 INSERT INTO editura (nume,telefon,adresa) VALUES ('Editura Gramar','0770104175','Bucuresti, Strada Ion Baiulescu, nr. 75');
 INSERT INTO editura (nume, telefon, adresa) VALUES ('Editura Carturesti','0213125450', 'Bucuresti Strada Barbu Vacarescu, nr. 22');
@@ -115,12 +120,14 @@ INSERT into editura ( nume, telefon, adresa ) values ( 'Litera', '0215230456', '
 
 
 -- cititor
+
 INSERT INTO cititor (nume,prenume,telefon,adresa) VALUES ('Vasile','Ion','0721111111','Bd. Constantin Brancoveanu nr 12');
 INSERT INTO cititor (nume,prenume,telefon,adresa) VALUES ('Teodor','Critian','0721222222','Bd. Constantin Brancoveanu nr 13');
 INSERT INTO cititor (nume, prenume, telefon, adresa) VALUES ('Laura',' Dima', '0752212034', ' Str, Frumoasa nr 15 ');
 INSERT INTO cititor ( nume, prenume, telefon, adresa) values ( 'Visan', 'Alina', '0215230789', 'str. Lalelelor nr.7');
 
 -- carte
+
 INSERT INTO carte 
 (id_autor,id_editura,denumire    ,nr_exemplare,an_aparitie ,pret) VALUES
 (1       ,1         ,'Luceafarul',5           ,'1883-04-01',100 );
@@ -151,12 +158,17 @@ INSERT INTO fisa_lectura
 
 
 -- modific nume, prenume in tabela cititor
+
 select * from cititor;
 update cititor set nume ='Ioana', prenume='Nicoleta' where id='3';
+
 -- modific locul nasterii in tabela autori
+
 select * from autori;
 update autor set locul_nasterii='Iasi' where id='7';
+
 -- modific  telefon in tabela editura 
+
 select * from editura;
 update editura set telefon='021789123' where id='4'
 
@@ -189,12 +201,15 @@ select * from fisa_lectura;
 SELECT  nume, prenume from autor where locul_nasterii ("Bucuresti");
 
 -- selectam primele intrari
+
 select*from autor limit 2;
 
 -- ignora 1 rand si afiseaza urmatoarele 2
+
 select*from autor limit 2 offset 1; 
 
 -- aranjare ordine descrescatoare  
+
 select*from  autor
 order by id desc
 limit 2 offset 1;
