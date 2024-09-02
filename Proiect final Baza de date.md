@@ -146,19 +146,19 @@ INSERT INTO cititor ( nume, prenume, telefon, adresa) values ( 'Visan', 'Alina',
 ```
 INSERT INTO carte (id_autor,id_editura,denumire,nr_exemplare,an_aparitie ,pret) VALUES(1,1,'Luceafarul',5,'1883-04-01',100 );
 
-INSERT INTO carte (id_autor,id_editura,denumire                      ,nr_exemplare,an_aparitie ,pret) VALUES (1       ,1         ,'La mormântul lui Aron Pumnul',10          ,'1886-01-01',50 );
+INSERT INTO carte (id_autor,id_editura,denumire ,nr_exemplare,an_aparitie ,pret) VALUES (1 ,1 ,'La mormântul lui Aron Pumnul',10 ,'1886-01-01',50 );
 
-INSERT INTO carte (id_autor,id_editura,denumire                ,nr_exemplare,an_aparitie ,pret) VALUES(2       ,2         ,'Amintiri din copilarie',4           ,'1892-01-01',150 );
+INSERT INTO carte (id_autor,id_editura,denumire ,nr_exemplare,an_aparitie ,pret) VALUES(2 ,2 ,'Amintiri din copilarie',4 ,'1892-01-01',150 );
 
-INSERT INTO carte (id_autor,id_editura,denumire                ,nr_exemplare,an_aparitie ,pret) VALUES(3       ,2         ,'Baltagul',14           ,'1930-11-01',200 );
+INSERT INTO carte (id_autor,id_editura,denumire,nr_exemplare,an_aparitie ,pret) VALUES(3,2 ,'Baltagul',14 ,'1930-11-01',200 );
 ```
 
 
 -- fisa_lectura 
 ```
-INSERT INTO fisa_lectura (id_carte,id_cititor,data_imprumut,data_returnare) VALUES(1       ,1         ,'2024-01-01' ,null  );
+INSERT INTO fisa_lectura (id_carte,id_cititor,data_imprumut,data_returnare) VALUES(1 ,1 ,'2024-01-01' ,null  );
 
-INSERT INTO fisa_lectura (id_carte,id_cititor,data_imprumut,data_returnare) VALUES(4       ,2         ,'2024-06-01' ,'2024-07-01'  );
+INSERT INTO fisa_lectura (id_carte,id_cititor,data_imprumut,data_returnare) VALUES(4,2 ,'2024-06-01' ,'2024-07-01'  );
 ```
  
 After the insert, in order to prepare the data to be better suited for the testing process, I updated some data in the following way:
