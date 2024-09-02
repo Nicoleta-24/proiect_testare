@@ -12,6 +12,10 @@ The scope of this project is to use all the SQL knowledge gained throught the So
 
 You can find below the database schema that was generated through Reverse Engineer and which contains all the tables and the relationships between them.
 
+
+ ![Database schema image](https://github.com/Nicoleta-24/proiect_testare/blob/main/Imagine1.png)
+
+
 The tables are connected in the following way:
 
 - **autor** is connected with **carte** through a **1:n** relationship which was implemented through **autor.id** as a primary key and **carte.id_autor** as a foreign key 
